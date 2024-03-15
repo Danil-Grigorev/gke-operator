@@ -14,12 +14,23 @@ updates:
   directory: "/"
   schedule:
     interval: "weekly"
+  labels:
+    - "kind/cleanup"
+    - "area/dependency"
+  groups:
+    dependencies:
+      patterns:
+        - "*"
   ignore:
     # Ignore controller-runtime as its upgraded manually.
     - dependency-name: "sigs.k8s.io/controller-runtime"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore k8s and its transitives modules as they are upgraded manually
     # together with controller-runtime.
     - dependency-name: "k8s.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+    - dependency-name: "go.etcd.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore wrangler
     - dependency-name: "github.com/rancher/wrangler"
     - dependency-name: "github.com/rancher/wrangler/v2"
@@ -33,12 +44,23 @@ updates:
   directory: "/"
   schedule:
     interval: "weekly"
+  labels:
+    - "kind/cleanup"
+    - "area/dependency"
+  groups:
+    dependencies:
+      patterns:
+        - "*"
   ignore:
     # Ignore controller-runtime as its upgraded manually.
     - dependency-name: "sigs.k8s.io/controller-runtime"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore k8s and its transitives modules as they are upgraded manually
     # together with controller-runtime.
     - dependency-name: "k8s.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+    - dependency-name: "go.etcd.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore wrangler
     - dependency-name: "github.com/rancher/wrangler"
     - dependency-name: "github.com/rancher/wrangler/v2"
@@ -52,12 +74,23 @@ updates:
   directory: "/"
   schedule:
     interval: "weekly"
+  labels:
+    - "kind/cleanup"
+    - "area/dependency"
+  groups:
+    dependencies:
+      patterns:
+        - "*"
   ignore:
     # Ignore controller-runtime as its upgraded manually.
     - dependency-name: "sigs.k8s.io/controller-runtime"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore k8s and its transitives modules as they are upgraded manually
     # together with controller-runtime.
     - dependency-name: "k8s.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+    - dependency-name: "go.etcd.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore wrangler
     - dependency-name: "github.com/rancher/wrangler"
     - dependency-name: "github.com/rancher/wrangler/v2"
@@ -73,12 +106,23 @@ updates:
   directory: "/"
   schedule:
     interval: "weekly"
+  labels:
+    - "kind/cleanup"
+    - "area/dependency"
+  groups:
+    dependencies:
+      patterns:
+        - "*"
   ignore:
     # Ignore controller-runtime as its upgraded manually.
     - dependency-name: "sigs.k8s.io/controller-runtime"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore k8s and its transitives modules as they are upgraded manually
     # together with controller-runtime.
     - dependency-name: "k8s.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+    - dependency-name: "go.etcd.io/*"
+      update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     # Ignore wrangler
     - dependency-name: "github.com/rancher/wrangler"
     - dependency-name: "github.com/rancher/wrangler/v2"
